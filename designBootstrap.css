@@ -1,0 +1,33 @@
+/************************PAGE CSS RELATIVE AUX OPTIONS DE BOOTSTRAP************************/
+/*.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/*PERMET DE REGLER L'AFFICHAGE SELON LA TAILLE DE L'APPAREIL UTILISE*/
+@media (min-width: 768px) 
+{
+	.container {	width: 750px;	}
+}
+@media (min-width: 992px) 
+{
+	.container {	width: 970px;	}
+}
+@media (min-width: 1200px) 
+{
+	.container {	width: 1170px;	}
+}
+
+[class*="col-"], footer {
+  background-color: lightgrey;
+  border: 2px black;
+  border-radius: 6px;
+  line-height: 40px;
+}
+
+#erreur {
+  background-color: red;
+  border-radius: 2px;
+  line-height: 10px;
+}
