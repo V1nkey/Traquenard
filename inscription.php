@@ -61,12 +61,6 @@ codeparrain = 6 chiffres
 				$triple = $_POST['triple'];
 				
 /*----------------------VERIFICATION DES DONNEES----------------------*/
-/*			if (preg_match("#^[a-zA-Z]+\-?[a-zA-Z]+$#", $nom)) //NOM NON CONFORME
-			if (preg_match("#^[a-zA-Z]+\-?[a-zA-Z]+$#", $prenom)) //PRENOM NON CONFORME
-			if (preg_match("#^[a-zA-Z0-9\_-]{4,15}$#", $pseudo)) //PSEUDO ENTRE 4 ET 15 CARACTERES
-			if (preg_match("#^[a-zA-Z]+\-?[a-zA-Z]+\.?@[a-zA-Z]+\.[a-zA-Z]+$#", $mail)) //xxx.yyy@exemple.com
-			mdp a checker
-			if (preg_match("#^[0-9]{6}$#", $codeparrain)) //6 CHIFFRES
 			if (checkdate($moisNaiss, $jourNaiss, $anneeNaiss))
 				$dateNaiss = $anneeNaiss.'-'.$moisNaiss.'-'.$jourNaiss;
 			else

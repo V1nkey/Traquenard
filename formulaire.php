@@ -1,39 +1,96 @@
 <?php
-	$displayform = true;
+	$displayform = false;
+	$testError = false;
 	$message = '';
-	
+	//var_dump($_POST);
 	if (isset($_POST) && !empty($_POST))
 	{
 		if (empty($_POST['nom']))
-			$message = "Le nom est obligatoire<br>";
-		else
-			$displayform = false;
-		
+		{
+			$message .= "Le nom est obligatoire<br>";
+			$displayform = true;
+			$testError = true;
+		}
+		elseif (!(preg_match("#^[a-zA-Z]+\-?[a-zA-Z]+$#", $_POST["nom"])))
+		{
+			$message .= "Le nom ne doit contenir que des lettres <br>";
+			$displayform = true;
+			$testError = true;
+		}
 		if (empty($_POST['prenom']))
+		{
 			$message = $message."Le prénom est obligatoire<br>";
-		else
-			$displayform = false;
-			
+			$displayform = true;
+			$testError = true;			
+		}
+		elseif (!(preg_match("#^[a-zA-Z]+\-?[a-zA-Z]+$#", $_POST["prenom"])))
+		{
+			$message .= "Le prénom ne doit contenir que des lettres <br>";
+			$displayform = true;
+			$testError = true;
+		}	
+		
 		if (empty($_POST['pseudo']))
+		{
 			$message .= "Le pseudo est obligatoire<br>";
-		else
-			$displayform = false;
-			
-		if (empty($_POST['mail'])) 
+			$displayform = true;
+			$testError = true;
+		}
+		elseif (!(preg_match("#^[a-zA-Z0-9\_-]{4,15}$#", $_POST["pseudo"])))
+		{
+			$message .= "Le pseudo ne peut contenir que des lettres, des chiffres ou les caractères suivants : _ - <br>Le pseudo doit faire entre 4 et 15 caractères";
+			$displayform = true;
+			$testError = true;
+		}
+		
+		if (empty($_POST['mail']))
+		{
 			$message .= "L'adresse mail est obligatoire<br>";
-		else
-			$displayform = false;
-			
+			$displayform = true;
+			$testError = true;
+		}
+		elseif (!(preg_match("#^[a-zA-Z]+\-?[a-zA-Z]+\.?@[a-zA-Z]+\.[a-zA-Z]+$#", $mail)))
+		{
+			$message .= "L'adresse mail ne doit contenir que des lettres, des chiffres ou les caractères suivants : _ -  <br>L'adresse mail doit être du type xyz@exemple.com";
+			$displayform = true;
+			$testError = true;
+		}
+		
 		if (empty($_POST['mdp']) || empty($_POST['confmdp']))
+		{	
 			$message .= "Le mot de passe est obligatoire<br>";
-		else
-			$displayform = false;
-			
+			$displayform = true;
+			$testError = true;
+		}
+		elseif (strcmp($_POST["mdp"], $_POST["confmdp"]) != 0)
+		{
+			$message .= "Les deux mots de passe sont différents <br>";
+			$displayform = true;
+			$testError = true;
+		}
+		
 		if (empty($_POST['codeparrain']))
+		{
 			$message .= "Le code parrain est obligatoire<br>";
-		else
-			$displayform = false;
+			$displayform = true;
+			$testError = true;
+		}
+		elseif (!(preg_match("#^[0-9]{6}$#", $_POST["codeparrain"])))
+		{
+			$message .= "Le code parrain est un code de 6 chiffres qui vous a été donné par votre parrain<br>";
+			$displayform = true;
+			$testError = true;
+		}
+		
+		if (!(checkdate($_POST["moisNaiss"], $_POST["jourNaiss"], $_POST["anneeNaiss"])))
+		{
+			$message .= "La date de naissance n'est pas valide<br>";
+			$displayform = true;
+			$testError = true;
+		}
 	}
+	else
+		$displayform = true;
 ?>
 
 
@@ -50,7 +107,7 @@
 
 	<body>
 		<div class='container'>
-	<!-- BARRE DE NAVIGATION : MENU HORIZONTAL-->
+<!--------------------------------------------------------------------BARRE DE NAVIGATION----------------------------------------------------------------------------->
 	<!-- COULEUR EVENTUELLEMENT A CHANGER-->
 			<nav class='navbar navbar-inverse navbar-fixed-top'>
 				<div class='container-fluid'>
@@ -85,20 +142,25 @@
 					</div>
 				</div>
 			</nav>
-	<!-- FIN DE BARRE DE NAVIGATION-->		
+<!------------------------------------------------------------FIN DE BARRE DE NAVIGATION------------------------------------------------------------------------------------->	
 			<br/>
 			<br/>
 
-				
+<!---------------------------------------------------------------------FORMULAIRE--------------------------------------------------------------------------------------------->		
 			<!-- !!!!!!!!!!!!!!!!!!! TRAITEMENT A REFAIRE POUR LE GERER SUR LA MEME PAGE !!!!!!!!!!!!!!!!!!! -->
 		<?php	if ($displayform): ?>
+		<?php		if($testError): ?>	
+						<div class="row">
+							<div class="col-lg-8 col-lg-offset-2 col-xs-12">
+								<div class="alert alert-danger" role="alert">
+		<?php						echo $message; ?>
+								</div>
+							</div>
+						</div>
+		<?php		endif; ?>
+			<br>
 			<div class='row'>
-				<div id='erreur' class="col-lg-8 col-lg-offset-2 col-xs-12">
-		<?php		echo $message; ?>
-				</div>
-			</div>
-			<div id='form' class='row'>
-				<FORM name='inscription' class="col-lg-8 col-lg-offset-2 col-xs-12" action ="formulaire.php" method ="POST" onsubmit="verifForm(this);">
+				<FORM id='form'  class="col-lg-8 col-lg-offset-2 col-xs-12" action ="formulaire.php" method ="POST" onsubmit="verifForm(this);">
 				<!-- dans class : taille du bloc : 8 col de large pour un grand ecran
 					2 colonnes de sautées avant le bloc
 					le bloc prend tout l'ecran pour un petit ecran
@@ -154,7 +216,7 @@
 						<label for='email'>Adresse mail : </label>
 			<!--			<div class="input-group">
 								<span class="input-group-addon">@</span> -->
-								<input type="text" id='email' name='mail' placeholder="Email" class = 'form-control' onblur="verifMail(this);"/>   
+								<input type="text" id='email' name='mail' placeholder="xyz@exemple.com" class = 'form-control' onblur="verifMail(this);"/>   
 			<!--			</div> -->
 					</div>
 					<div class='form-group'>
@@ -244,12 +306,12 @@
 					<!-- le hidden sera peut etre utile plus tard, en attendant de savoir les fonctionnalités il sert à rien -->
 						<input type="hidden" name='XXX' value='XXX' />
 
-						<button type='submit' class="btn btn-primary"> Valider </button>
-							 
+						<button type='submit' class="btn btn-primary"> Valider </button>			 
 				</FORM>
 		<?php	else : ?>
 			Inscription Ok
 		<?php 	endif; ?>
 		</div>
+<!---------------------------------------------------------------------FIN DU FORMULAIRE FORMULAIRE---------------------------------------------------------------------------->	
 	</body>
 </html>

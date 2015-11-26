@@ -19,15 +19,21 @@
 	.container {	width: 1170px;	}
 }
 
-[class*="col-"], footer {
+#form {
   background-color: lightgrey;
-  border: 2px black;
+  border: 1px solid black;
   border-radius: 6px;
   line-height: 40px;
 }
 
-#erreur {
-  background-color: red;
-  border-radius: 2px;
-  line-height: 10px;
+/*.navbar {
+	background-color: lightgrey;
 }
+
+/*#erreur {
+  color: red;
+  background-color: #FFDAB9;
+  border: 2px black;
+  border-radius: 6px;
+  line-height: 40px;
+}*/
