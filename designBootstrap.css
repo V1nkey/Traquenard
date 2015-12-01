@@ -19,11 +19,8 @@
 	.container {	width: 1170px;	}
 }
 
-#form {
-  background-color: lightgrey;
-  border: 1px solid black;
-  border-radius: 6px;
-  line-height: 40px;
+#test {
+	background-color: #e5e5e5;
 }
 
 /*.navbar {
