@@ -49,9 +49,9 @@
 			$displayform = true;
 			$testError = true;
 		}
-		elseif (!(preg_match("#^[a-zA-Z]+\-?[a-zA-Z]+\.?@[a-zA-Z]+\.[a-zA-Z]+$#", $mail)))
+		elseif (!(preg_match("#^[a-zA-Z]+\-?[a-zA-Z]+\.?@[a-zA-Z]+\.[a-zA-Z]+$#", $_POST["mail"])))
 		{
-			$message .= "L'adresse mail ne doit contenir que des lettres, des chiffres ou les caractères suivants : _ -  <br>L'adresse mail doit être du type xyz@exemple.com";
+			$message .= "L'adresse mail ne doit contenir que des lettres, des chiffres ou les caractères suivants : _ -  <br>L'adresse mail doit être du type xyz@exemple.com <br>";
 			$displayform = true;
 			$testError = true;
 		}
@@ -91,6 +91,9 @@
 	}
 	else
 		$displayform = true;
+	
+	if ($displayform == false)
+		$message = "Inscription réussie";
 ?>
 
 
@@ -134,15 +137,15 @@
 					-->
 						<div class='form-group'>
 							<label for='nom'>Nom : </label> 
-								<input type="text" id='nom' name='nom' placeholder="Nom" class='form-control' onblur="verifNomPrenom(this);"/> 
+								<input type="text" id='nom' name='nom' placeholder="Nom" class='form-control' value='<?php echo (isset($_POST['nom']) ? $_POST['nom'] : "") ?>' onblur="verifNomPrenom(this);"/> 
 						</div>
 						<div class='form-group'>
 							<label for='prenom'>Prénom : </label>
-								<input type="text" id='prenom' name='prenom' placeholder="Prénom" class = 'form-control' onblur="verifNomPrenom(this);"/>
+								<input type="text" id='prenom' name='prenom' placeholder="Prénom" class = 'form-control' value='<?php echo (isset($_POST['prenom']) ? $_POST['prenom'] : "") ?>' onblur="verifNomPrenom(this);"/>
 						</div>
 						<div class='form-group'>
 							<label for='login'>Pseudo : </label>
-								<input type="text" id='pseudo' name='pseudo' placeholder="Pseudo" class = 'form-control' onblur="verifPseudo(this);"/> 
+								<input type="text" id='pseudo' name='pseudo' placeholder="Pseudo" class = 'form-control' value='<?php echo (isset($_POST['pseudo']) ? $_POST['pseudo'] : "") ?>' onblur="verifPseudo(this);"/> 
 						</div>
 						<div class='form-group'>
 							<label for='ddn'>Date de naissance : </label>
@@ -183,7 +186,7 @@
 							<label for='email'>Adresse mail : </label>
 			<!--				<div class="input-group">
 									<span class="input-group-addon">@</span> -->
-									<input type="text" id='email' name='mail' placeholder="xyz@exemple.com" class = 'form-control' onblur="verifMail(this);"/>   
+									<input type="text" id='email' name='mail' placeholder="xyz@exemple.com" class = 'form-control' value='<?php echo (isset($_POST['mail']) ? $_POST['mail'] : "") ?>' onblur="verifMail(this);"/>   
 			<!--				</div> -->
 						</div>
 						<div class='form-group'>
@@ -196,7 +199,7 @@
 						</div>
 						<div class='form-group'>
 							<label for='code'>Code parrain : </label>
-								<input type="text" id='code' name='codeparrain' class = 'form-control' onblur="verifCode(this);"/> 
+								<input type="text" id='code' name='codeparrain' class = 'form-control' value='<?php echo (isset($_POST['codeparrain']) ? $_POST['codeparrain'] : "") ?>' onblur="verifCode(this);"/> 
 						</div>
 						<div class='form-group'>
 							Avez vous une voiture pour nous aider - pour les livraisons de bi&egrave;re - ?  
@@ -276,7 +279,11 @@
 							<button type='submit' class="btn btn-primary"> Valider </button>			 
 					</FORM>
 		<?php		else : ?>
-						Inscription Ok
+						<div class="row">
+							<div class="alert alert-success" role="alert">
+		<?php					echo $message; ?>
+							</div>
+						</div>
 		<?php 		endif; ?>
 				</div>
 			</div>

@@ -19,9 +19,20 @@
 	.container {	width: 1170px;	}
 }
 
-#test {
+#test  {
 	background-color: #e5e5e5;
 }
+
+#accueil {
+	background-color: red;
+	
+}
+
+#accueil #corps {
+	padding: 10px;
+	
+}
+	
 
 /*.navbar {
 	background-color: lightgrey;

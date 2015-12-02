@@ -12,9 +12,22 @@
 <!--------------------------------------------------------------------BARRE DE NAVIGATION----------------------------------------------------------------------------->		
 		<?php	include 'menuHorsCo.php'; ?>
 <!------------------------------------------------------------FIN DE BARRE DE NAVIGATION------------------------------------------------------------------------------------->
-		
-		<br/>
-		<br/>
+			<br/>
+			<br/>
+				<div id="accueil" class="col-lg-10 col-lg-offset-1 col-xs-12">
+					<div class='row'>
+						<h1 id="corps" border='1'>Information : </h1>
+								blabla oklm on est là négro !
+					</div>
+					<div class='row'>
+							<h1 id="corps" border='1'>Bières : </h1>
+								blabla oklm on est là négro !
+					</div>
+					<div class='row'>
+							<h1 id="corps" border='1'>Comment nous rejoindre : </h1>
+								blabla oklm on est là négro !
+					</div>
+				<div>
 		</div>
 	</body>
 </html>

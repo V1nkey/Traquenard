@@ -9,12 +9,12 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<!--<a class="navbar-brand" href="accueil.php">Accueil</a>-->
+						<a class="navbar-brand" href="#">Le Traquenard</a>
 					</div>
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">		
 						<ul class='nav navbar-nav'>
 							<li><a href="accueil.php">Accueil </a></li>
-							<li><a href="#">ETC </a></li>
+							<li><a href="#">Espace Membre </a></li>
 							<li><a href="#">ETC </a></li>
 							<li class='dropdown'>
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
