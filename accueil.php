@@ -14,20 +14,121 @@
 <!------------------------------------------------------------FIN DE BARRE DE NAVIGATION------------------------------------------------------------------------------------->
 			<br/>
 			<br/>
-				<div id="accueil" class="col-lg-10 col-lg-offset-1 col-xs-12">
-					<div class='row'>
-						<h1 id="corps" border='1'>Information : </h1>
-								blabla oklm on est là négro !
-					</div>
-					<div class='row'>
-							<h1 id="corps" border='1'>Bières : </h1>
-								blabla oklm on est là négro !
-					</div>
-					<div class='row'>
-							<h1 id="corps" border='1'>Comment nous rejoindre : </h1>
-								blabla oklm on est là négro !
-					</div>
-				<div>
+			<div id="accueil" class="col-lg-10 col-lg-offset-1 col-xs-12">
+				<div id="information" class='row'>
+					<h1  border='1'>Information : </h1>
+							cette partie contiendra diverses informations sur le bar.
+							cette partie contiendra diverses informations sur le bar
+							cette partie contiendra diverses informations sur le bar
+							cette partie contiendra diverses informations sur le bar
+							cette partie contiendra diverses informations sur le bar
+							cette partie contiendra diverses informations sur le bar
+							cette partie contiendra diverses informations sur le bar
+							cette partie contiendra diverses informations sur le bar.
+							cette partie contiendra diverses informations sur le bar
+							cette partie contiendra diverses informations sur le bar
+							cette partie contiendra diverses informations sur le bar
+							cette partie contiendra diverses informations sur le bar
+							cette partie contiendra diverses informations sur le bar
+							cette partie contiendra diverses informations sur le bar
+							cette partie contiendra diverses informations sur le bar.
+							cette partie contiendra diverses informations sur le bar
+							cette partie contiendra diverses informations sur le bar
+							cette partie contiendra diverses informations sur le bar
+							cette partie contiendra diverses informations sur le bar
+							cette partie contiendra diverses informations sur le bar
+							cette partie contiendra diverses informations sur le bar
+							cette partie contiendra diverses informations sur le bar.
+							cette partie contiendra diverses informations sur le bar
+							cette partie contiendra diverses informations sur le bar
+							cette partie contiendra diverses informations sur le bar
+							cette partie contiendra diverses informations sur le bar
+							cette partie contiendra diverses informations sur le bar
+							cette partie contiendra diverses informations sur le bar	
+				</div>
+				<div id="biere" class='row'>
+						<h1  border='1'>Bières : </h1>
+							cette partie contiendra la liste des bières disponibles au bar.
+							cette partie contiendra la liste des bières disponibles au bar.
+							cette partie contiendra la liste des bières disponibles au bar.
+							cette partie contiendra la liste des bières disponibles au bar.
+							cette partie contiendra la liste des bières disponibles au bar.
+							cette partie contiendra la liste des bières disponibles au bar.
+							cette partie contiendra la liste des bières disponibles au bar.
+							cette partie contiendra la liste des bières disponibles au bar.
+							cette partie contiendra la liste des bières disponibles au bar.
+							cette partie contiendra la liste des bières disponibles au bar.
+							cette partie contiendra la liste des bières disponibles au bar.
+							cette partie contiendra la liste des bières disponibles au bar.
+							cette partie contiendra la liste des bières disponibles au bar.
+							cette partie contiendra la liste des bières disponibles au bar.
+							cette partie contiendra la liste des bières disponibles au bar.
+							cette partie contiendra la liste des bières disponibles au bar.
+							cette partie contiendra la liste des bières disponibles au bar.
+							cette partie contiendra la liste des bières disponibles au bar.
+							cette partie contiendra la liste des bières disponibles au bar.
+							cette partie contiendra la liste des bières disponibles au bar.
+							cette partie contiendra la liste des bières disponibles au bar.
+							cette partie contiendra la liste des bières disponibles au bar.
+							cette partie contiendra la liste des bières disponibles au bar.
+							cette partie contiendra la liste des bières disponibles au bar.
+							cette partie contiendra la liste des bières disponibles au bar.
+							cette partie contiendra la liste des bières disponibles au bar.
+							cette partie contiendra la liste des bières disponibles au bar.
+							cette partie contiendra la liste des bières disponibles au bar.
+							cette partie contiendra la liste des bières disponibles au bar.
+							cette partie contiendra la liste des bières disponibles au bar.
+				</div>
+				<div id="joindre" class='row'>
+						<h1  border='1'>Comment nous rejoindre : </h1>
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+							cette partie contiendra les informations de contact
+				</div>
+			</div>
 		</div>
+		<footer>Copyright Kiwi & Time 2015</footer>
 	</body>
 </html>
