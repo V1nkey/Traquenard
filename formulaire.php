@@ -115,12 +115,11 @@
 <!--------------------------------------------------------------------BARRE DE NAVIGATION----------------------------------------------------------------------------->		
 		<?php	include 'menuHorsCo.php'; ?>
 <!------------------------------------------------------------FIN DE BARRE DE NAVIGATION------------------------------------------------------------------------------------->	
-
 <!---------------------------------------------------------------------FORMULAIRE--------------------------------------------------------------------------------------------->		
 			<div id='mainDiv' class="col-lg-10 col-lg-offset-1 col-xs-12">
 			<br/>
 			<br/>
-				<div class="col-lg-8 col-lg-offset-2 col-xs-12">
+				<div class="col-lg-10 col-lg-offset-1 col-xs-12 para">
 		<?php		if ($displayform): ?>
 		<?php			if($testError): ?>	
 							<div class="row">
@@ -174,7 +173,7 @@
 												<option value = "12">Décembre</option>
 											</select>
 										</div>
-										<div class='col-lg-2 col-xs-4'>
+										<div class='col-lg-3 col-xs-4'>
 											<select id='ddn' name="anneeNaiss" size ='1'class='form-control'>
 		<?php								for ($i=1900; $i<=2000; $i++) : ?>
 												<option><?php echo "$i"; ?></option>
@@ -288,9 +287,9 @@
 		<?php 		endif; ?>
 				</div>
 			</div>
-			</div>
 		</div>
 <!---------------------------------------------------------------------FIN DU FORMULAIRE FORMULAIRE---------------------------------------------------------------------------->	
+		<script src="scriptNavbar.js" type="text/javascript"></script>
 	</body>
 </html>
 
@@ -303,12 +302,10 @@
 <!--
 GARDER LES INFO DE CONNEXION EN PHP : 
 $_SERVER : données du server et du client !
-
 $_SESSION : permet de maintenir la session sur toutes les pages
 ex : $_SESSION['user_id'] = 42;
 on peut récupérer 42 avec $_SESSION['user_id'] partout dans le site
 1 règle : dire d'ouvrir une session : session_start();
-
 index.php:
 < ? php 
 	session_start();
@@ -324,22 +321,7 @@ index.php:
 		<a href='user.php'>ICI</a>
 	</body>
 </html>
-
 autre page :
 < ? php
 	session_start();
 	$user = $_SESSION;
-
-
-
-
-
-
-
-
-
-
-
-
-
-

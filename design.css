@@ -6,8 +6,42 @@ body
 	background: url(image/biere2.jpg) 0 0 fixed no-repeat;
 }
 
+.ancre
+{
+	content : "";
+	transform : translateY(-50px) ;
+}
+
+.para
+{
+	text-align : justify;
+	padding: 0 50px;
+	background-color : #F0E68C;
+	border-style: outset;	
+	border-radius: 6px;
+}
+
+/*.titreaccueil
+{
+	padding: 20px 20px;
+	background-color: #e5e5e5;
+}
+
 /*div#form
 {
 	background-color: grey;
 }
 */
+
+
+footer 
+{
+	color : black;
+	font-weight: bolder;
+	font-family : cursive;
+	text-shadow:0px 0px 9px #FFF;
+	text-align : right;
+	bottom: 5px;
+	right: 5px;
+	position : fixed;
+}	

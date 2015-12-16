@@ -36,6 +36,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="bootstrap/js/bootstrap.min.js"></script>
 		<script src="scriptForm.js" type="text/javascript"></script>
+		<script src="scriptNavbar.js" type="text/javascript"></script>
 	</head>
 
 	<body>
@@ -86,5 +87,6 @@
 				</div>
 			</div>
 		</div>
+		<script src="scriptNavbar.js" type="text/javascript"></script>
 	</body>
 </html>

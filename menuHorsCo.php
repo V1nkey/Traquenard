@@ -13,18 +13,26 @@
 					</div>
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">		
 						<ul class='nav navbar-nav'>
-							<li><a href="accueil.php">Accueil </a></li>
-							<li><a href="#">ETC </a></li>
-							<li><a href="#">ETC </a></li>
+						
 							<li class='dropdown'>
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
+								<a href="accueil.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Accueil <span class="caret"></span></a>
 								<ul class="dropdown-menu">
-									<li><a href="#">Sous Menu 1 </a></li>
-									<li><a href="#">Sous Menu 2 </a></li>
-									<li role="separator" class="divider"></li>
-									<li><a href="#">Sous Menu 3 </a></li>
+									<li><a href="accueil.php#information">Informations </a></li>
+									<li><a href="accueil.php#biere">Bières</a></li>
+									<li><a href="accueil.php#joindre">Nous joindre </a></li>
 								</ul>
 							</li>
+							
+							<li class='dropdown'>
+								<a href="espaceMembre.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Espace Membre <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="espaceMembre.php#statistique">Statistique</a></li>
+									<li><a href="espaceMembre.php#soiree">Inscription à une soirée</a></li>
+								</ul>
+							</li>
+							
+							<li><a href="contact.php">Contact </a></li>
+							
 						</ul>
 						<ul class='nav navbar-nav navbar-right'>
 							<li><a href="connexion.php">Connexion </a></li>		<!--MENU HORIZONTAL-->
